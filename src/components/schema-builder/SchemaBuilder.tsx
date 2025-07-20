@@ -2,8 +2,8 @@ import React from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { FieldRow } from './FieldRow';
 import { JsonPreview } from './JsonPreview';
-import { AddButton } from '@/components/common/AddButton';
-import { SchemaField, SchemaBuilderData } from '@/types/schema';
+import { AddButton } from '../common/AddButton';
+import { SchemaField, SchemaBuilderData } from '../../types/schema';
 
 const generateId = () => Math.random().toString(36).substr(2, 9);
 

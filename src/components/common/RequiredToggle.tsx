@@ -1,6 +1,5 @@
 import React from 'react';
-import { Switch } from '@/components/ui/switch';
-
+import { Switch } from "../ui/switch";
 interface RequiredToggleProps {
   checked: boolean;
   onChange: (checked: boolean) => void;

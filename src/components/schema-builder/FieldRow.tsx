@@ -1,11 +1,11 @@
 import React from 'react';
 import { useFormContext } from 'react-hook-form';
-import { SchemaField, FieldType } from '@/types/schema';
-import { FieldInput } from '@/components/common/FieldInput';
-import { TypeSelector } from '@/components/common/TypeSelector';
-import { RequiredToggle } from '@/components/common/RequiredToggle';
-import { DeleteButton } from '@/components/common/DeleteButton';
-import { AddButton } from '@/components/common/AddButton';
+import { SchemaField, FieldType } from '../../types/schema';
+import { FieldInput } from '../common/FieldInput';
+import { TypeSelector } from '../common/TypeSelector';
+import { RequiredToggle } from '../common/RequiredToggle';
+import { DeleteButton } from '../common/DeleteButton';
+import { AddButton } from '../common/AddButton';
 
 interface FieldRowProps {
   field: SchemaField;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SchemaField } from '@/types/schema';
+import { SchemaField } from '../../types/schema';
 
 interface JsonPreviewProps {
   fields: SchemaField[];

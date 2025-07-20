@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+    
+    /* Schema Builder Colors */
+    --schema-bg: 0 0% 100%;
+    --schema-border: 220 13% 91%;
+    --schema-input-bg: 0 0% 100%;
+    --schema-input-border: 220 13% 91%;
+    --schema-button-primary: 217 91% 60%;
+    --schema-button-primary-hover: 217 91% 55%;
+    --schema-button-danger: 0 84% 60%;
+    --schema-button-danger-hover: 0 84% 55%;
+    --schema-text-primary: 222 84% 5%;
+    --schema-text-secondary: 215 16% 47%;
+    --schema-nested-border: 220 13% 91%;
+    --schema-preview-bg: 210 40% 96%;
+    --schema-preview-text: 222 84% 5%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
+    
+    /* Schema Builder Dark Colors */
+    --schema-bg: 222 84% 5%;
+    --schema-border: 217 33% 18%;
+    --schema-input-bg: 222 84% 5%;
+    --schema-input-border: 217 33% 18%;
+    --schema-button-primary: 217 91% 60%;
+    --schema-button-primary-hover: 217 91% 65%;
+    --schema-button-danger: 0 63% 31%;
+    --schema-button-danger-hover: 0 63% 36%;
+    --schema-text-primary: 210 40% 98%;
+    --schema-text-secondary: 215 20% 65%;
+    --schema-nested-border: 217 33% 18%;
+    --schema-preview-bg: 217 33% 18%;
+    --schema-preview-text: 210 40% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .schema-container {
+    @apply min-h-screen;
+    background-color: hsl(var(--schema-bg));
+  }
+  
+  .schema-panel {
+    @apply p-6 overflow-y-auto;
+    border-color: hsl(var(--schema-border));
+  }
+  
+  .schema-field-input {
+    @apply h-9 border rounded-md px-3 py-2 text-sm;
+    background-color: hsl(var(--schema-input-bg));
+    border-color: hsl(var(--schema-input-border));
+    color: hsl(var(--schema-text-primary));
+  }
+  
+  .schema-field-input:focus {
+    @apply outline-none ring-2 ring-offset-2;
+    ring-color: hsl(var(--schema-button-primary));
+  }
+  
+  .schema-button-primary {
+    @apply px-4 py-2 rounded-md text-white font-medium transition-colors;
+    background-color: hsl(var(--schema-button-primary));
+  }
+  
+  .schema-button-primary:hover {
+    background-color: hsl(var(--schema-button-primary-hover));
+  }
+  
+  .schema-button-danger {
+    @apply p-2 rounded-md transition-colors;
+    background-color: transparent;
+    color: hsl(var(--schema-button-danger));
+  }
+  
+  .schema-button-danger:hover {
+    background-color: hsl(var(--schema-button-danger) / 0.1);
+  }
+  
+  .schema-nested-container {
+    border-left: 2px solid hsl(var(--schema-nested-border));
+  }
+  
+  .schema-preview {
+    @apply p-4 rounded border font-mono text-sm whitespace-pre-wrap;
+    background-color: hsl(var(--schema-preview-bg));
+    color: hsl(var(--schema-preview-text));
+    border-color: hsl(var(--schema-border));
+  }
+}

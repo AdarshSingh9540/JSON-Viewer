@@ -1,6 +1,8 @@
 #JSON Schema Builder
 A modern web app for creating JSON schemas with a drag-and-drop interface, built with React, TypeScript, and Vite. Craft complex, nested schemas with real-time previews and robust validation.
 
+# Live Deployed URL
+>>> https://json-viewer-pink.vercel.app/
 
 #Features
 1.Dynamic Fields: Add, edit, or delete schema fields instantly
